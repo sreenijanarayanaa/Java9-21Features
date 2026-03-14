@@ -15,10 +15,12 @@ Before Java 9, Java applications were monolithic, meaning everything was on the 
 Java 9 introduced modules, which allow you to organize applications into independent units with explicit dependencies.
 
 Example
+```
 module com.myapp {
     requires java.sql;
     exports com.myapp.service;
 }
+```
 Benefits
 
 ✨ Strong encapsulation
@@ -31,13 +33,18 @@ Benefits
 Java 9 introduced convenient methods to create immutable collections.
 
 Before Java 9
+```
 List<String> list = new ArrayList<>();
 list.add("A");
 list.add("B");
+```
 Java 9+
+```
 List<String> list = List.of("A", "B", "C");
 Set<Integer> set = Set.of(1, 2, 3);
 Map<Integer,String> map = Map.of(1,"A",2,"B");
+```
+
 Advantages
 
 ✔ Less boilerplate code
@@ -48,36 +55,41 @@ Advantages
 
 Java 9 enhanced streams with new methods.
 
-takeWhile()
+
+* takeWhile()
 
 Stops when condition becomes false.
-
+```
 Stream.of(1,2,3,4,5)
       .takeWhile(n -> n < 4)
       .forEach(System.out::println);
-
+```
 Output
 
 1
 2
 3
-dropWhile()
+
+
+* dropWhile()
 
 Skips elements until condition becomes false.
-
+```
 Stream.of(1,2,3,4,5)
       .dropWhile(n -> n < 3)
       .forEach(System.out::println);
-
+```
 Output
 
 3
 4
 5
+
+
 🔒 4. Private Methods in Interfaces
 
 Interfaces can now have private helper methods.
-
+```
 interface Vehicle {
 
     private void log() {
@@ -89,6 +101,7 @@ interface Vehicle {
         System.out.println("Vehicle started");
     }
 }
+```
 ⚡ Java 10 (2018)
 
 Java 10 introduced type inference for local variables.
@@ -98,13 +111,15 @@ Java 10 introduced type inference for local variables.
 The compiler automatically infers the variable type.
 
 Example
+```
 var name = "Java";
 var numbers = List.of(1,2,3);
-
+```
 Equivalent to:
-
+```
 String name = "Java";
 List<Integer> numbers = List.of(1,2,3);
+```
 Benefits
 
 ✔ Reduces boilerplate
