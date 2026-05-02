@@ -1,3 +1,7 @@
+Java 21 focuses mainly on improving scalability, readability, and developer productivity.
+The most important feature is Virtual Threads, which enables handling a large number of concurrent tasks efficiently.
+It also introduces Pattern Matching improvements, Record Patterns, Sequenced Collections, and String Templates to reduce boilerplate code and improve readability.
+
 🧸 1. Virtual Threads (BIGGEST FEATURE)
 
 “How do you create Virtual Threads and how are they different?”
